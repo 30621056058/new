@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //引用值
+    let a = new Object();
+    a.name = "ni"
+   // alert(a.name);//输出ni
+    //原始值
+    let b ="a";
+    b.name = "ni";;
+   // alert(b.name);//输出了未定义
+    //复制值
+    var c = 5;
+    var p= c;
+     c=c+2
+    //console.log(p)//5
+    //console.log(c)//7
+    //var p 初始化为var c ,他们两个的储存位置不同，所有他们2个是独立的。
+
+    const obj = new Object();
+    const big = obj;
+    obj.name = "hah";
+    //console.log(big.name)//hah
+    //obj保存了一个新的对象实例，然后被复制到big，big所复制的东西是一个指针，这个指针就是new object（）,他们都是指向储存在堆栈中的对象。
+
+    //传递参数
+    function n(num){
+        num +=10;
+        return num;//返回值
+    }
+    let count=20;//变量
+    let r= n(count);//获取count的值，传值
+    console.log(count);//20
+    console.log(r)//30，因为+10
+
+    function set(obj){
+        obj.name="a";
+        obj = new Object();//这里，obj重写了，变成了一个本地的指针，当函数执行完之后，他会自动销毁。
+        obj.name="b";
+    }
+    let person = new Object();
+    set(person);
+    console.log(person.name);//a
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //执行上下文与作用域
+    //作用域链
+    var color = "blue";
+    function changecolor(){
+        if(color==="blue"){
+            color = 'red';
+        }else{
+            color="blue";
+        }
+    }
+    changecolor();
+    //changecolor包含2个对象，一个是arguments,一个是color（全局上下文对象），通过作用域链能够访问到color。
+    var colora ="blue";
+    function changecolora(){
+        let an = "red";
+        function sw(){
+            let te = an;
+            an = color;
+            color = te;
+        }
+        sw();
+    }
+    changecolora();
+</script>
