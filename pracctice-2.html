@@ -57,7 +57,50 @@
    //sum没有用var声明，被调用之后，sum就被添加到了全局上下文。
 
    //变量提升
-   console.log(qwe)//undefined
+   //console.log(qwe)//undefined
    var qwe=1
    //因为console.log(qwe)在var qwe=1上面声名了，所以找不到变量，就会输出undefined。
+
+   //let与var的区别
+   {
+    var thinke
+   }
+   //console.log(thinke)//undefined
+   {
+       let th
+   }
+   //console.log(th)//报错
+   //let是块级作用域，所以console.log(th)无法访问到。
+
+   var as;
+   var as;
+   {
+       let ab;
+       //let ab;//报错，无法重复声明。
+   }
+
+   for (i=0;i<10;i++){
+
+   }
+   console.log(i)//迭代变量时会出现泄露。
+   for(let j=0; j<10;j++ ){
+
+   }
+//cosnole.log(j)//无法访问到里面的作用域。
+
+//const关键字
+//const a;//没有初始化变量，会报错
+const t = 3;
+console.log(t)
+
+if(true){
+    const g = 0;
+}
+//console.log(g)//无法访问
+
+const o1 = {};
+//o1 = {};//const无法重新赋值
+const o2 = {};
+o2.name = "a";//可以应用到对象当中
+console.log(o2.name);
  </script>
