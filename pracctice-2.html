@@ -29,8 +29,35 @@
             let te = an;
             an = color;
             color = te;
+            //一个局部上下文
         }
-        sw();
+        sw();//不能访问到te，因为他出去了
     }
-    changecolora();
-</script>
+    changecolora();//只能访问到colora,因为他在最外面，只能访问到最外面。
+    //作用域增强
+    function bulid(){
+        let qs = "debug=true";
+        
+        with(location){
+            let url = href + qs;
+            
+        }
+        
+        return url;
+        
+    }
+    function suma(num1,num2){
+     var sum = num1+num2;
+      sum = num1+num2;//删除var之后，外部的console.log（sum）就可以访问到。
+        return sum;
+    }
+    var re = suma(10,20);//30
+    console.log(re)
+    //console.log(sum)sum不是一个有效的变量，sum定义在函数内部。
+   //sum没有用var声明，被调用之后，sum就被添加到了全局上下文。
+
+   //变量提升
+   console.log(qwe)//undefined
+   var qwe=1
+   //因为console.log(qwe)在var qwe=1上面声名了，所以找不到变量，就会输出undefined。
+ </script>
