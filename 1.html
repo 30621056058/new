@@ -14,15 +14,18 @@ list-style: none;
 <script>
 function tab(a){
 	var tabs=['tab1','tab2','tab3','tab4'];
-	//
+	//变量
 	for(var i=0;i<4;i++){
+		//输出0,1,2,3
 		if(tab[i]==a){
-
+			//赋值 a是点击事件传值
 		
 		console.log(a)
 		document.getElementById(tabs[i]).style.display="block";
+		//如果相等，显示
 	    }else{
 		document.getElementById(tabs[i]).style.display='none';
+		//不相等，隐藏
 	}
 }
 }
@@ -33,6 +36,7 @@ function tab(a){
 <div id="tabNav">
 <ul>
 <li onclick="tab('tab1')">标题一</li>
+  <!-- tab是函数名，tab1是需要传的值 -->
 <li onclick="tab('tab2')">标题二</li>
 <li onclick="tab('tab3')">标题三</li>
 <li onclick="tab('tab4')">标题四</li>
