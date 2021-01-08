@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //原始值的包装类型
+    let s1= "some";
+    let s2= s1.substring(2)
+    //原始值s1并不是对象，但他却可以调用方法，是因为后台的操作，当s2访问s1时，是以读模式访问。
+    //后台的3个操作：创建一个string类型的实例；调用实例上的方法。销毁实例。
+    let s1 = new String("aa");
+    s2= s1.substring(2)
+    s2=null;
+    //类似与上面的操作
+</script>

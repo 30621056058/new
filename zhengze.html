@@ -24,6 +24,18 @@
         var m = t.replace(/re/i,"world");//似乎不能改变变量的值，可以操作元素中的文本。
         document.getElementById("h").innerHTML = m;//输出hello world
      }
-     var test1 = new RegExp("e")
-     document.write(test1.test("The best things in life are free"));
+     var test1 = /e/
+    //  document.write(test1.test("The best things in life are free"));
+
+     var number1= "00-00-00";
+     let verdict = /\d{2}-\d{2}-\d{2}/;//\d{2}匹配2个数字
+
+     if(verdict.test(number1)){//如果number1的值符合正则所匹配的，就console.log(ture)
+         console.log("ture")
+     }
+
+     var tu = new RegExp("hello world")
+     //document.write(tu.exec("things"))//t
+     document.write(tu.exec("hello world"))//hello world
+//exex:就是匹配与正则相匹配的字符。
 </script>
