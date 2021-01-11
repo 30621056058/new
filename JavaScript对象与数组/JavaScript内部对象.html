@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //object对象
+    obj = new Object()//创建object对象。
+    //object对象的属性
+    var i=new Number(10);
+Number.prototype.add=function(a){//为Number添加了一个add的方法。
+	return this+a//
+}
+window.alert(i.add(10).add(30).add(10));//调用的话，不能用Number.add调用，因为不是一个方法，不能直接add，不然就是not defined
+var b=90;
+// window.alert(b.add(40));
+    //object对象的属性
+    //object对象
+
+    function Person(){};
+var pro = Person.prototype;//得到对象的原型
+var obj = pro.constructor ; // 这样可以得到Person对象。
+console.log(obj)
+</script>
