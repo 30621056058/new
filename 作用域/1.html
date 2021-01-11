@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    a();//这是因为函数的作用域提升了，所以可以调用；
+    console.log(a)//输出a function ，这是因为变量先提升了，函数第二个提升，所有输出了function a。
+    function a (){
+        console.log("1")
+    }
+    var a = 12;
+    console.log(a)//输出12
+
+
+</script>

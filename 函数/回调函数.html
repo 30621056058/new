@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function add(num1,num2){return num1+num2;}
+    function addb(num1,num2){return num1-num2;}
+    function addc(num1,num2){return num1*num2;}
+    function addn(num1,num2){return num1/num2;}
+    function both(num1,num2,f){
+        return f(num1,num2);//就相当于add(num1,num2)
+    }
+    var a =  both(10,10,add)//调用add函数
+    console.log(a)
+</script>
