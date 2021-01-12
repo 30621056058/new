@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //es5
+    const  A = [,,,]
+    //console.log(A.length)//3
+    //console.log(A)//Array(3)
+    //es6
+    const option =[1,,5]
+    for(const m of option){//for(of)是es6的循环遍历数组的方法。
+       // console.log(m)//1,undefined,5
+    }
+    const b = Array.from([,,,,])
+    for(var a of b){
+        console.log(a === undefined);//true
+        console.log(Array.of(...[,,,,,,,,]));//都是undefined
+    }
+</script>
